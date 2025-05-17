@@ -1,0 +1,9 @@
+@mixin box-shadow($shadow-color, $shadow-size: 5px) {
+  box-shadow: 0 0 $shadow-size $shadow-color;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

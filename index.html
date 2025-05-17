@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="sidebar__brand flex-row">
+        <button id="btn-sidebar-collapse" class="btn">
+          <img src="/assets/icons/icon-dashboard.svg" alt="Menu" />
+        </button>
+
+        <img
+          src="/assets/icons/icon-calendar.svg"
+          alt=""
+          id="sidebar-brand-logo"
+        />
+      </div>
+      <nav id="sidebar-navbar">
+        <div>
+          <ul class="sidebar-navbar__links">
+            <li class="sidebar-navbar__links__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-dashboard.svg" alt="Dashboard" />
+                <span>Dashboard</span></a
+              >
+            </li>
+            <li class="sidebar-navbar-link__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-calendar.svg" alt="Schedule" />
+                <span>Schedule</span></a
+              >
+            </li>
+            <li class="sidebar-navbar-link__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-message.svg" alt="Message" />
+                <span>Message</span></a
+              >
+            </li>
+            <li class="sidebar-navbar-link__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-chart.svg" alt="Analysis" />
+                <span>Analysis</span></a
+              >
+            </li>
+            <li class="sidebar-navbar-link__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-team.svg" alt="Team" /><span
+                  >Team</span
+                ></a
+              >
+            </li>
+          </ul>
+          <hr />
+          <ul class="sidebar-navbar__links">
+            <li class="sidebar-navbar__links__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-user.svg" alt="Profile" />
+                <span>Profile</span></a
+              >
+            </li>
+            <li class="sidebar-navbar__links__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-setting.svg" alt="Settings" />
+                <span>Settings</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="sidebar-footer">
+          <ul class="sidebar-navbar__links">
+            <li class="sidebar-navbar__links__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-info.svg" alt="Help" />
+                <span>Help</span></a
+              >
+            </li>
+            <li class="sidebar-navbar__links__item">
+              <a href="#" class="sidebar-navbar__links__item__link"
+                ><img src="/assets/icons/icon-logout.svg" alt="Logout" />
+                <span>Logout</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <header id="page-header">
+      <nav class="page-header__navbar grid-page">
+        <form action="#" id="form-navbar-search">
+          <div class="form-group form-group--with-icon">
+            <img src="/assets/icons/icon-search.svg" alt="Search icon" />
+            <input type="text" name="search" placeholder="Search here..." />
+          </div>
+        </form>
+        <div id="page-header-buttons" class="flex-row">
+          <button class="page-header-button">
+            <img src="/assets/icons/icon-bell.svg" alt="Notification icon" />
+          </button>
+          <button class="page-header-button">
+            <img src="/assets/icons/icon-message-text.svg" alt="Chat icon" />
+          </button>
+          <button id="page-header-button-profile">
+            Mirie Kiritani
+            <img src="/assets/icons/icon-down-chevron.svg" alt="Dropdown" />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content" class="grid-page">
+      <section id="section-overview">
+        <div class="card card-between">
+          <div class="card-title">
+            <h3>Overview</h3>
+          </div>
+          <div class="card-body">
+            <div class="section-overview__stats">
+              <div class="section-overview__stats__item">
+                <div class="section-overview__stats__item__header">
+                  <div class="section-overview__stats__item__header__icon">
+                    <img src="/assets/icons/icon-purse.svg" alt="Saving" />
+                  </div>
+                  <h4>Your Balance</h4>
+                  <p>
+                    <img
+                      src="/assets/icons/icon-top-right-green.svg"
+                      alt="Deflation icon"
+                    />15 % compared with last month
+                  </p>
+                </div>
+                <div class="section-overview__stats__item__value">
+                  <h2>$ 28,891.138</h2>
+                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                </div>
+              </div>
+              <div class="section-overview__stats__item">
+                <div class="section-overview__stats__item__header">
+                  <div class="section-overview__stats__item__header__icon">
+                    <img src="/assets/icons/icon-saving.svg" alt="Saving" />
+                  </div>
+                  <h4>Saving</h4>
+                  <p>
+                    <img
+                      src="/assets/icons/icon-top-right-red.svg"
+                      alt="Deflation icon"
+                    />10 % compared with last month
+                  </p>
+                </div>
+                <div class="section-overview__stats__item__value">
+                  <h2>$ 1,050.44</h2>
+                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                </div>
+              </div>
+              <div class="section-overview__stats__item">
+                <div class="section-overview__stats__item__header">
+                  <div class="section-overview__stats__item__header__icon">
+                    <img src="/assets/icons/icon-expense.svg" alt="Saving" />
+                  </div>
+                  <h4>Expenses</h4>
+                  <p>
+                    <img
+                      src="/assets/icons/icon-top-right-yellow.svg"
+                      alt="Deflation icon"
+                    />2 % compared with last montg
+                  </p>
+                </div>
+                <div class="section-overview__stats__item__value">
+                  <h2>$ 200.31</h2>
+                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                </div>
+              </div>
+              <div class="section-overview__stats__item">
+                <div class="section-overview__stats__item__header">
+                  <div class="section-overview__stats__item__header__icon">
+                    <img src="/assets/icons/icon-incomes.svg" alt="Saving" />
+                  </div>
+                  <h4>Incomes</h4>
+                  <p>
+                    <img
+                      src="/assets/icons/icon-top-right-blue.svg"
+                      alt="Deflation icon"
+                    />8 % compared with last month
+                  </p>
+                </div>
+                <div class="section-overview__stats__item__value">
+                  <h2>$ 21,121.0</h2>
+                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-splan">
+        <div class="card card-between">
+          <div class="card-title card-title-border"><h3>Saving Plan</h3></div>
+          <div class="card-body">
+            <div class="section-splan__item">
+              <div class="section-splan__item__header">
+                <span> Bali Vacation </span>
+                <p>Target: August 25 2022</p>
+              </div>
+              <div class="section-splan__item__stats">
+                <div class="section-splan__item__stats__detail">
+                  <div class="section-splan__item__stats__detail__value">
+                    <h3>$ 1950,21<span>/ $ 4000</span></h3>
+                  </div>
+                  <div
+                    class="section-splan__item__stats__detail__percent"
+                    style="color: #4745a4"
+                  >
+                    48%
+                  </div>
+                </div>
+                <div class="section-splan__item__stats__range">
+                  <div
+                    class="section-splan__item__stats__range__value"
+                    style="background-color: #4745a4; width: 48%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="section-splan__item">
+              <div class="section-splan__item__header">
+                <span> New Gadget </span>
+                <p>Target: August 25 2022</p>
+              </div>
+              <div class="section-splan__item__stats">
+                <div class="section-splan__item__stats__detail">
+                  <div class="section-splan__item__stats__detail__value">
+                    <h3>$ 790,21<span>/ $ 1000</span></h3>
+                  </div>
+                  <div
+                    class="section-splan__item__stats__detail__percent"
+                    style="color: #dd9802"
+                  >
+                    79%
+                  </div>
+                </div>
+                <div class="section-splan__item__stats__range">
+                  <div
+                    class="section-splan__item__stats__range__value"
+                    style="background-color: #f9ba33; width: 79%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="section-splan__item">
+              <div class="section-splan__item__header">
+                <span> Charity </span>
+                <p>Target: August 25 2022</p>
+              </div>
+              <div class="section-splan__item__stats">
+                <div class="section-splan__item__stats__detail">
+                  <div class="section-splan__item__stats__detail__value">
+                    <h3>$ 32,111<span>/ $ 100</span></h3>
+                  </div>
+                  <div
+                    class="section-splan__item__stats__detail__percent"
+                    style="color: #3bbb6e"
+                  >
+                    32%
+                  </div>
+                </div>
+                <div class="section-splan__item__stats__range">
+                  <div
+                    class="section-splan__item__stats__range__value"
+                    style="background-color: #3bbb6e; width: 48%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-analytics">
+        <div class="card">
+          <div class="card-title">
+            <h3>Analytics</h3>
+            <div id="section-analytics-indices">
+              <div class="section-analytics-indices__legend">
+                <div
+                  class="section-analytics-indices__legend__indicator"
+                  style="background-color: #4745a4"
+                ></div>
+                <div class="section-analytics-indices__legend__text">
+                  Label 1
+                </div>
+              </div>
+              <div class="section-analytics-indices__legend">
+                <div
+                  class="section-analytics-indices__legend__indicator"
+                  style="background-color: #f9ba33"
+                ></div>
+                <div class="section-analytics-indices__legend__text">
+                  Label 2
+                </div>
+              </div>
+              <form id="section-analytics-filter-by-week">
+                <select name="filter-week">
+                  <option value="1">Week1</option>
+                  <option value="2">Week2</option>
+                  <option value="3">Week3</option>
+                  <option value="4">Week4</option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <div class="card-body">Analytics</div>
+        </div>
+      </section>
+      <section id="section-recentr">
+        <div class="card card-between">
+          <div class="card-title card-title-border">
+            <h3>Recent Transaction</h3>
+          </div>
+          <div class="card-body">
+            <div class="section-recentr__item">
+              <div class="section-recentr__item__info">
+                <div class="section-recentr__item__info__img">
+                  <img src="/assets/image/logo-figma.png" alt="Figma" />
+                </div>
+                <div class="section-recentr__item__info__detail">
+                  <h4>Figma</h4>
+                  <p>August 20, 2022</p>
+                </div>
+              </div>
+              <div class="section-recentr__item__stats">
+                <h4>$ 100</h4>
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="section-recentr__item">
+              <div class="section-recentr__item__info">
+                <div class="section-recentr__item__info__img">
+                  <img src="/assets/image/logo-figma.png" alt="Figma" />
+                </div>
+                <div class="section-recentr__item__info__detail">
+                  <h4>Youtube</h4>
+                  <p>August 20, 2022</p>
+                </div>
+              </div>
+              <div class="section-recentr__item__stats">
+                <h4>$ 120</h4>
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="section-recentr__item">
+              <div class="section-recentr__item__info">
+                <div class="section-recentr__item__info__img">
+                  <img src="/assets/image/logo-figma.png" alt="Figma" />
+                </div>
+                <div class="section-recentr__item__info__detail">
+                  <h4>Spotify</h4>
+                  <p>August 20, 2022</p>
+                </div>
+              </div>
+              <div class="section-recentr__item__stats">
+                <h4>$ 15</h4>
+                <p>Completed</p>
+              </div>
+            </div>
+            <div class="section-recentr__item">
+              <div class="section-recentr__item__info">
+                <div class="section-recentr__item__info__img">
+                  <img src="/assets/image/logo-figma.png" alt="Figma" />
+                </div>
+                <div class="section-recentr__item__info__detail">
+                  <h4>Freepik</h4>
+                  <p>August 20, 2022</p>
+                </div>
+              </div>
+              <div class="section-recentr__item__stats">
+                <h4>$ 300</h4>
+                <p>Completed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

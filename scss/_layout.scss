@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $base-spacing;
+}
+
+.flex-row {
+  @include flex-center;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 1100px) {
+  .grid-page {
+    grid-template-columns: 8.5fr 3.5fr;
+  }
+}

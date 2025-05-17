@@ -1,0 +1,36 @@
+.btn {
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(137, 137, 137);
+  }
+}
+
+.card {
+  background-color: $gray-0;
+  padding: 16px;
+  border-radius: $base-radius;
+  height: 100%;
+  width: 100%;
+  .card-title,
+  .card-body {
+    width: 100%;
+  }
+
+  .card-title {
+    padding-bottom: calc($base-spacing * 2);
+  }
+
+  .card-title-border {
+    border-bottom: 1px solid $gray-100;
+  }
+}
+
+.card-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
