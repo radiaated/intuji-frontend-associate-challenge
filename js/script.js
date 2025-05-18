@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const htmlDropdownContainer = document.querySelectorAll(
     ".dropdown-container__dropdown"
   );
+  const htmlHeaderMenuDropdown = document.querySelector("#page-header-buttons");
+  const htmlHeaderMenuDropdownButton =
+    document.querySelector("#btn-header-menu");
 
   // Sidebar collapse handler
   function sidebarCollapseHandler(event) {
@@ -47,13 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetId = button.getAttribute("data-target");
       const targetDropdown = document.getElementById(targetId);
 
-      htmlDropdownContainer.forEach((dropdown) => {
-        if (dropdown.id !== targetId) {
-          dropdown.classList.add("collapsed");
-        }
-      });
+      if (targetDropdown) {
+        htmlDropdownContainer.forEach((dropdown) => {
+          if (dropdown.id !== targetId) {
+            dropdown.classList.add("collapsed");
+          }
+        });
 
-      targetDropdown.classList.toggle("collapsed");
+        targetDropdown.classList.toggle("collapsed");
+      }
     });
   });
 
@@ -63,6 +68,19 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdown.classList.add("collapsed");
       }
     });
+  });
+
+  // Hanlde menu drop down
+  htmlHeaderMenuDropdownButton.addEventListener("click", function (event) {
+    // event.stopPropagation();
+
+    htmlHeaderMenuDropdown.classList.toggle("collapsed");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!htmlHeaderMenuDropdown.contains(event.target)) {
+      htmlHeaderMenuDropdown.classList.add("collapsed");
+    }
   });
 
   // Handle analytics chart

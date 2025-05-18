@@ -17,10 +17,15 @@
   padding: calc(0.5 * $base-spacing);
   border-radius: $border-pill;
   width: fit-content;
+  transition: background-color 0.1s ease-in-out;
 
   img {
     height: 28px;
     width: 28px;
+  }
+
+  &:hover {
+    background-color: $gray-100;
   }
 }
 
@@ -35,6 +40,7 @@
 
     #btn-header-menu {
       display: block;
+      height: 100%;
     }
   }
 
@@ -43,13 +49,14 @@
     @include box-shadow;
     display: flex;
 
+    position: absolute;
+    top: 50px;
+    right: 0;
+
     background-color: $gray-0;
     border-radius: $border-pill;
     gap: 10px;
     padding: 8px;
-    position: absolute;
-    bottom: -45px;
-    right: $base-spacing;
 
     &.collapsed {
       display: none;
@@ -113,8 +120,8 @@
   }
 
   #page-header-buttons {
-    display: flex !important;
     position: static !important;
+    display: flex !important;
     box-shadow: none !important;
   }
 }
@@ -231,7 +238,8 @@
   transition: left 0.3s ease-in-out;
 
   #sidebar-header {
-    @include flex-row-start;
+    @include flex-row-between;
+    margin-right: $base-spacing;
     .sidebar__brand {
       @include flex-row-start;
       gap: calc(0.5 * $base-spacing);

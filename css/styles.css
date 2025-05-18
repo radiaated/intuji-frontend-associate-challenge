@@ -65,7 +65,6 @@ h4 {
 }
 
 img {
-  max-width: 100%;
   display: block;
   height: auto;
 }
@@ -217,10 +216,14 @@ a:active {
   padding: 0.625em;
   border-radius: 9999px;
   width: fit-content;
+  transition: background-color 0.1s ease-in-out;
 }
 .btn-header-nav img {
   height: 28px;
   width: 28px;
+}
+.btn-header-nav:hover {
+  background-color: #dedede;
 }
 
 #page-header {
@@ -234,6 +237,7 @@ a:active {
 }
 #page-header .page-header__navbar #btn-header-menu {
   display: block;
+  height: 100%;
 }
 #page-header #page-header-buttons {
   display: flex;
@@ -243,13 +247,13 @@ a:active {
   justify-content: flex-start;
   box-shadow: rgba(60, 64, 67, 0.1) 0px 1px 2px 0px, rgba(60, 64, 67, 0.1) 0px 2px 6px 2px;
   display: flex;
+  position: absolute;
+  top: 50px;
+  right: 0;
   background-color: #fff;
   border-radius: 9999px;
   gap: 10px;
   padding: 8px;
-  position: absolute;
-  bottom: -45px;
-  right: 1.25em;
 }
 #page-header #page-header-buttons.collapsed {
   display: none;
@@ -307,8 +311,8 @@ a:active {
     display: none !important;
   }
   #page-header-buttons {
-    display: flex !important;
     position: static !important;
+    display: flex !important;
     box-shadow: none !important;
   }
 }
@@ -427,7 +431,8 @@ a:active {
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
+  margin-right: 1.25em;
 }
 #sidebar #sidebar-header .sidebar__brand {
   display: flex;

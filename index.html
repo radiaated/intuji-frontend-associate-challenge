@@ -122,117 +122,140 @@
             </div>
           </form>
         </div>
-        <button id="btn-header-menu" class="btn btn-header-nav">
-          <img
-            src="/assets/icons/icon-menu.svg"
-            alt="Menu"
-            style="width: 28px"
-          />
-        </button>
-        <div id="page-header-buttons" class="collapsed">
-          <div class="dropdown-container">
-            <button
-              class="btn page-header-button btn-dropdown"
-              data-target="page-header-notification-dropdown"
-            >
-              <img src="/assets/icons/icon-bell.svg" alt="Notification icon" />
-            </button>
-            <div
-              id="page-header-notification-dropdown"
-              class="dropdown-container__dropdown collapsed"
-            >
-              <div class="dropdown-container__dropdown__title">
-                Notifications
+        <div>
+          <button id="btn-header-menu" class="btn btn-header-nav btn-dropdown">
+            <img
+              src="/assets/icons/icon-menu.svg"
+              alt="Menu"
+              style="width: 28px"
+            />
+          </button>
+
+          <div id="page-header-buttons" class="collapsed">
+            <div class="dropdown-container">
+              <button
+                class="btn page-header-button btn-dropdown"
+                data-target="page-header-notification-dropdown"
+              >
+                <img
+                  src="/assets/icons/icon-bell.svg"
+                  alt="Notification icon"
+                />
+              </button>
+              <div
+                id="page-header-notification-dropdown"
+                class="dropdown-container__dropdown collapsed"
+              >
+                <div class="dropdown-container__dropdown__title">
+                  Notifications
+                </div>
+                <ul class="dropdown-container__dropdown__list">
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">
+                      Check these new widgets.
+                      <div class="page-header-notification__datetime">
+                        5m
+                      </div></a
+                    >
+                  </li>
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">
+                      Someone poked you.
+                      <div class="page-header-notification__datetime">
+                        15h
+                      </div></a
+                    >
+                  </li>
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">
+                      John doe visited your website.
+                      <div class="page-header-notification__datetime">
+                        1d
+                      </div></a
+                    >
+                  </li>
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">
+                      Check these trends.
+                      <div class="page-header-notification__datetime">
+                        2w
+                      </div></a
+                    >
+                  </li>
+                </ul>
               </div>
-              <ul class="dropdown-container__dropdown__list">
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">
-                    Check these new widgets.
-                    <div class="page-header-notification__datetime">5m</div></a
-                  >
-                </li>
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">
-                    Someone poked you.
-                    <div class="page-header-notification__datetime">15h</div></a
-                  >
-                </li>
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">
-                    John doe visited your website.
-                    <div class="page-header-notification__datetime">1d</div></a
-                  >
-                </li>
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">
-                    Check these trends.
-                    <div class="page-header-notification__datetime">2w</div></a
-                  >
-                </li>
-              </ul>
             </div>
-          </div>
-          <div class="dropdown-container">
-            <button
-              class="btn page-header-button btn-dropdown"
-              data-target="page-header-message-dropdown"
-            >
-              <img src="/assets/icons/icon-message-text.svg" alt="Chat icon" />
-            </button>
-            <div
-              id="page-header-message-dropdown"
-              class="dropdown-container__dropdown collapsed"
-            >
-              <div class="dropdown-container__dropdown__title">Messages</div>
-              <ul class="dropdown-container__dropdown__list">
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">
-                    <strong>johndoe: </strong> Hello
-                    <div class="page-header-notification__datetime">5m</div></a
-                  >
-                </li>
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">
-                    <strong>ram: </strong> call me later
-                    <div class="page-header-notification__datetime">5m</div></a
-                  >
-                </li>
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">
-                    <strong>cena: </strong> okay sure
-                    <div class="page-header-notification__datetime">5m</div></a
-                  >
-                </li>
-              </ul>
+            <div class="dropdown-container">
+              <button
+                class="btn page-header-button btn-dropdown"
+                data-target="page-header-message-dropdown"
+              >
+                <img
+                  src="/assets/icons/icon-message-text.svg"
+                  alt="Chat icon"
+                />
+              </button>
+              <div
+                id="page-header-message-dropdown"
+                class="dropdown-container__dropdown collapsed"
+              >
+                <div class="dropdown-container__dropdown__title">Messages</div>
+                <ul class="dropdown-container__dropdown__list">
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">
+                      <strong>johndoe: </strong> Hello
+                      <div class="page-header-notification__datetime">
+                        5m
+                      </div></a
+                    >
+                  </li>
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">
+                      <strong>ram: </strong> call me later
+                      <div class="page-header-notification__datetime">
+                        5m
+                      </div></a
+                    >
+                  </li>
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">
+                      <strong>cena: </strong> okay sure
+                      <div class="page-header-notification__datetime">
+                        5m
+                      </div></a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="dropdown-container">
-            <button
-              id="page-header-button-profile"
-              class="btn page-header-button btn-dropdown"
-              data-target="page-header-profile-dropdown"
-            >
-              <img
-                src="/assets/image/person-avatar.jpg"
-                alt="Dropdown"
-                id="page-header-button-profile-avatar"
-                loading="lazy"
-              />
-              Mirie Kiritani
-              <img src="/assets/icons/icon-down-chevron.svg" alt="Dropdown" />
-            </button>
-            <div
-              id="page-header-profile-dropdown"
-              class="dropdown-container__dropdown collapsed"
-            >
-              <ul class="dropdown-container__dropdown__list">
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">Profile</a>
-                </li>
-                <li class="dropdown-container__dropdown__list__item">
-                  <a href="#">Settings</a>
-                </li>
-              </ul>
+            <div class="dropdown-container">
+              <button
+                id="page-header-button-profile"
+                class="btn page-header-button btn-dropdown"
+                data-target="page-header-profile-dropdown"
+              >
+                <img
+                  src="/assets/image/person-avatar.jpg"
+                  alt="Dropdown"
+                  id="page-header-button-profile-avatar"
+                  loading="lazy"
+                />
+                Mirie Kiritani
+                <img src="/assets/icons/icon-down-chevron.svg" alt="Dropdown" />
+              </button>
+              <div
+                id="page-header-profile-dropdown"
+                class="dropdown-container__dropdown collapsed"
+              >
+                <ul class="dropdown-container__dropdown__list">
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">Profile</a>
+                  </li>
+                  <li class="dropdown-container__dropdown__list__item">
+                    <a href="#">Settings</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
