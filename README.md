@@ -1,6 +1,7 @@
 # Intuji Frontend Associate Challenge
 
 The project is a submission to **Intuji Frontend Associate Challenge**.
+[Demo](https://intuji-assignment.netlify.app/)
 
 ---
 
