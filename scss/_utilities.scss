@@ -3,7 +3,7 @@
 
   input {
     border: 0;
-    padding: 13px 20px;
+    padding: 14px 20px;
     border-radius: $border-pill;
     padding: {
       top: 20px;
@@ -18,5 +18,50 @@
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
+  }
+}
+
+.dropdown-container {
+  position: relative;
+
+  .dropdown-container__dropdown {
+    @include box-shadow;
+    font-size: 12px;
+    display: block;
+    background-color: $gray-0;
+    border: 1px solid $gray-100;
+    border-radius: $base-radius;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+
+    &.collapsed {
+      display: none;
+    }
+  }
+
+  .dropdown-container__dropdown__title {
+    padding: calc(0.5 * $base-spacing) $base-spacing;
+    font-size: 10px;
+    width: 100%;
+    background-color: $gray-50;
+    border-bottom: 1px solid $gray-100;
+  }
+
+  .dropdown-container__dropdown__list {
+    list-style: none;
+    padding: 0;
+    .dropdown-container__dropdown__list__item {
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: calc(0.35 * $base-spacing) $base-spacing;
+      }
+    }
   }
 }

@@ -1,4 +1,15 @@
+// --------------
+// Main content
+// --------------
+
+#main-content {
+  margin-left: 0;
+  margin: $base-spacing;
+}
+
+// --------------
 // Header/Navbar
+// --------------
 
 .btn-header-nav {
   display: block;
@@ -11,10 +22,6 @@
     height: 28px;
     width: 28px;
   }
-
-  &:hover {
-    background-color: $gray-100;
-  }
 }
 
 #page-header {
@@ -25,7 +32,6 @@
     display: flex;
     justify-content: space-between;
     gap: calc(0.75 * $base-spacing);
-    grid-template-columns: 10fr 2fr;
 
     #btn-header-menu {
       display: block;
@@ -59,89 +65,36 @@
       }
     }
 
-    #page-header-notification-container {
-      position: relative;
-
-      #page-header-notification-dropdown {
-        @include box-shadow;
-        font-size: 12px;
-        display: block;
-        background-color: $gray-0;
-        border: 1px solid $gray-100;
-        border-radius: $base-radius;
-        width: 200px;
-        position: absolute;
-        top: 55px;
-        left: 0;
-
-        &.collapsed {
-          display: none;
-        }
-      }
-
-      #page-header-notification-dropdown-list {
-        list-style: none;
-        padding: 0;
-        .page-header-notification-dropdown-list__item {
-          padding: calc(0.75 * $base-spacing) $base-spacing;
-          white-space: nowrap;
-          overflow: hidden;
-        }
-      }
+    .page-header-notification__datetime {
+      font-size: 10px;
+      color: #7c7c7c;
     }
 
-    #page-header-profile-container {
-      position: relative;
-      #page-header-button-profile {
-        @include flex-row-between;
-        @extend .page-header-button;
-        gap: 0.25em;
-        border: 0;
-        white-space: nowrap;
-        overflow: hidden;
+    #page-header-profile-dropdown {
+      right: 0;
+      left: unset;
+    }
 
-        #page-header-button-profile-avatar {
-          width: 24px;
-          height: 24px;
-          object-fit: cover;
-          border-radius: $border-pill;
-        }
-        img {
-          height: 6px;
-          width: auto;
-        }
+    #page-header-button-profile {
+      @include flex-row-between;
+      @extend .page-header-button;
+      gap: 0.25em;
+      border: 0;
+      white-space: nowrap;
+      overflow: hidden;
+
+      #page-header-button-profile-avatar {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        border-radius: $border-pill;
       }
-      #page-header-profile-dropdown {
-        @include box-shadow;
-        display: block;
-        background-color: $gray-0;
-        border: 1px solid $gray-100;
-        border-radius: $base-radius;
-
-        width: 100%;
-        position: absolute;
-        bottom: -105px;
-        right: 0;
-        text-align: left;
-
-        #page-header-profile-dropdown-list {
-          list-style: none;
-          padding: 0;
-          .page-header-profile-dropdown-list__item {
-            padding: calc(0.75 * $base-spacing) $base-spacing;
-          }
-        }
-      }
-      #page-header-profile-dropdown.collapsed {
-        display: none;
+      img {
+        height: 6px;
+        width: auto;
       }
     }
   }
-}
-
-#main-content {
-  margin-left: 0;
-  margin: $base-spacing;
 }
 
 @media only screen and (min-width: 740px) {
@@ -166,7 +119,103 @@
   }
 }
 
+// --------------
 // Sidebar
+// --------------
+
+#sidebar {
+  @include flex-col;
+  position: fixed;
+  top: 0;
+  left: calc(-100%);
+  z-index: 90;
+  background-color: $gray-0;
+  overflow-y: scroll;
+  height: 100vh;
+  width: $sidebar-width;
+
+  transition: left 0.3s ease-in-out;
+
+  #sidebar-header {
+    @include flex-row-start;
+    .sidebar__brand {
+      @include flex-row-start;
+      gap: calc(0.5 * $base-spacing);
+      padding: calc(1.5 * $base-spacing);
+    }
+  }
+
+  #sidebar-navbar {
+    @include flex-col-between;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    > * {
+      width: 100%;
+    }
+
+    .sidebar-navbar__links {
+      @include flex-col;
+      list-style: none;
+
+      gap: $base-spacing;
+      .sidebar-navbar__links__item {
+        padding: 0 $base-spacing;
+        transition: background-color 0.1s;
+        &.active {
+          border-left: 4px solid $primary-color;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background-color: $gray-50;
+        }
+
+        .sidebar-navbar__links__item__link {
+          @include flex-row-start;
+          gap: 16px;
+          padding: {
+            left: 25px;
+            top: calc(0.3 * $base-spacing);
+            bottom: calc(0.3 * $base-spacing);
+          }
+        }
+      }
+    }
+    #sidebar-footer {
+      margin-bottom: $base-spacing;
+    }
+  }
+  &.sidebar-collapsed {
+    left: 0;
+    display: block;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $gray-0;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width: 740px) {
+  #sidebar {
+    left: 0;
+  }
+  .btn-sidebar-collapse {
+    display: none;
+  }
+}
+
+// --------------
+// Sidebar
+// --------------
 
 #sidebar {
   @include flex-col;
@@ -257,7 +306,9 @@
   }
 }
 
-// Overview
+// --------------
+// Section: Overview
+// --------------
 
 #section-overview {
   .section-overview__stats {
@@ -316,7 +367,9 @@
   }
 }
 
-// Saving plan
+// --------------
+// Section: Saving plan
+// --------------
 
 #section-splan {
   @include flex-col;
@@ -369,7 +422,9 @@
   }
 }
 
-// Analytics
+// --------------
+// Section: Analytics
+// --------------
 #section-analytics {
   .card-title {
     @include flex-row-between;
@@ -411,7 +466,9 @@
   }
 }
 
-// Recent transactions
+// --------------
+// Section: Recent transactions
+// --------------
 
 #section-recentr {
   .card-title {

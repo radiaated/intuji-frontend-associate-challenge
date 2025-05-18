@@ -8,13 +8,16 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- --------------- -->
+    <!-- Sidebar -->
+    <!-- --------------- -->
     <div id="sidebar">
       <div id="sidebar-header">
         <div class="sidebar__brand">
           <img
             src="/assets/image/brand-logo.svg"
             style="height: 28px"
-            alt=""
+            alt="Brand logo"
             id="sidebar-brand-logo"
           />
           radiated
@@ -99,6 +102,9 @@
         </div>
       </nav>
     </div>
+    <!-- --------------- -->
+    <!-- Header / Navbar -->
+    <!-- --------------- -->
     <header id="page-header">
       <nav class="page-header__navbar">
         <div class="flex-row" style="gap: 0.75em; width: 100%">
@@ -124,75 +130,107 @@
           />
         </button>
         <div id="page-header-buttons" class="collapsed">
-          <div id="page-header-notification-container">
-            <button class="btn page-header-button">
+          <div class="dropdown-container">
+            <button
+              class="btn page-header-button btn-dropdown"
+              data-target="page-header-notification-dropdown"
+            >
               <img src="/assets/icons/icon-bell.svg" alt="Notification icon" />
             </button>
-            <div id="page-header-notification-dropdown" class="collapsed">
-              <ul id="page-header-notification-dropdown-list">
-                <li class="page-header-notification-dropdown-list__item">
-                  <a
-                    href="#"
-                    class="page-header-notification-dropdown-list__item__link"
-                  >
+            <div
+              id="page-header-notification-dropdown"
+              class="dropdown-container__dropdown collapsed"
+            >
+              <div class="dropdown-container__dropdown__title">
+                Notifications
+              </div>
+              <ul class="dropdown-container__dropdown__list">
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">
                     Check these new widgets.
-                  </a>
-                </li>
-                <li class="page-header-notification-dropdown-list__item">
-                  <a
-                    href="#"
-                    class="page-header-notification-dropdown-list__item__link"
+                    <div class="page-header-notification__datetime">5m</div></a
                   >
+                </li>
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">
                     Someone poked you.
-                  </a>
-                </li>
-                <li class="page-header-notification-dropdown-list__item">
-                  <a
-                    href="#"
-                    class="page-header-notification-dropdown-list__item__link"
+                    <div class="page-header-notification__datetime">15h</div></a
                   >
+                </li>
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">
                     John doe visited your website.
-                  </a>
-                </li>
-                <li class="page-header-notification-dropdown-list__item">
-                  <a
-                    href="#"
-                    class="page-header-notification-dropdown-list__item__link"
+                    <div class="page-header-notification__datetime">1d</div></a
                   >
+                </li>
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">
                     Check these trends.
-                  </a>
+                    <div class="page-header-notification__datetime">2w</div></a
+                  >
                 </li>
               </ul>
             </div>
           </div>
-          <button class="btn page-header-button">
-            <img src="/assets/icons/icon-message-text.svg" alt="Chat icon" />
-          </button>
-          <div id="page-header-profile-container">
-            <button id="page-header-button-profile" class="btn">
+          <div class="dropdown-container">
+            <button
+              class="btn page-header-button btn-dropdown"
+              data-target="page-header-message-dropdown"
+            >
+              <img src="/assets/icons/icon-message-text.svg" alt="Chat icon" />
+            </button>
+            <div
+              id="page-header-message-dropdown"
+              class="dropdown-container__dropdown collapsed"
+            >
+              <div class="dropdown-container__dropdown__title">Messages</div>
+              <ul class="dropdown-container__dropdown__list">
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">
+                    <strong>johndoe: </strong> Hello
+                    <div class="page-header-notification__datetime">5m</div></a
+                  >
+                </li>
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">
+                    <strong>ram: </strong> call me later
+                    <div class="page-header-notification__datetime">5m</div></a
+                  >
+                </li>
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">
+                    <strong>cena: </strong> okay sure
+                    <div class="page-header-notification__datetime">5m</div></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown-container">
+            <button
+              id="page-header-button-profile"
+              class="btn page-header-button btn-dropdown"
+              data-target="page-header-profile-dropdown"
+            >
               <img
                 src="/assets/image/person-avatar.jpg"
                 alt="Dropdown"
                 id="page-header-button-profile-avatar"
+                loading="lazy"
               />
               Mirie Kiritani
               <img src="/assets/icons/icon-down-chevron.svg" alt="Dropdown" />
             </button>
-            <div id="page-header-profile-dropdown" class="collapsed">
-              <ul id="page-header-profile-dropdown-list">
-                <li class="page-header-profile-dropdown-list__item">
-                  <a
-                    href="#"
-                    class="page-header-profile-dropdown-list__item__link"
-                    >Profile</a
-                  >
+            <div
+              id="page-header-profile-dropdown"
+              class="dropdown-container__dropdown collapsed"
+            >
+              <ul class="dropdown-container__dropdown__list">
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">Profile</a>
                 </li>
-                <li class="page-header-profile-dropdown-list__item">
-                  <a
-                    href="#"
-                    class="page-header-profile-dropdown-list__item__link"
-                    >Settings</a
-                  >
+                <li class="dropdown-container__dropdown__list__item">
+                  <a href="#">Settings</a>
                 </li>
               </ul>
             </div>
@@ -200,7 +238,13 @@
         </div>
       </nav>
     </header>
+    <!-- --------------- -->
+    <!-- Sections -->
+    <!-- --------------- -->
     <main id="main-content" class="grid-page">
+      <!-- --------------- -->
+      <!-- Section: Overview -->
+      <!-- --------------- -->
       <section id="section-overview">
         <div class="card card-between">
           <div class="card-title">
@@ -408,6 +452,9 @@
           </div>
         </div>
       </section>
+      <!-- --------------- -->
+      <!-- Section: Saving plan -->
+      <!-- --------------- -->
       <section id="section-splan">
         <div class="card card-between">
           <div class="card-title card-title-border">
@@ -493,6 +540,9 @@
           </div>
         </div>
       </section>
+      <!-- --------------- -->
+      <!-- Section: Analytics -->
+      <!-- --------------- -->
       <section id="section-analytics">
         <div class="card">
           <div class="card-title">
@@ -533,6 +583,9 @@
           </div>
         </div>
       </section>
+      <!-- --------------- -->
+      <!-- Section: Recent Transactions -->
+      <!-- --------------- -->
       <section id="section-recentr">
         <div class="card card-between">
           <div class="card-title card-title-border">
@@ -608,58 +661,5 @@
 
     <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-      const ctx = document.getElementById("analysis-chart");
-
-      new Chart(ctx, {
-        type: "line",
-
-        data: {
-          labels: ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"],
-          datasets: [
-            {
-              label: "Label 1",
-              data: [12, 19, 3, 5, 2, 3, 8],
-              borderWidth: 1,
-              fill: false,
-              borderColor: "#4745a4",
-              tension: 0.1,
-              backgroundColor: "#4745a4",
-            },
-            {
-              label: "Label 2",
-              data: [9, 8, 5, 33, 44, 55, 99, 44],
-              borderWidth: 1,
-              fill: false,
-              borderColor: "#f9ba33",
-              tension: 0.1,
-              backgroundColor: "#f9ba33",
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: "top",
-              labels: {
-                usePointStyle: true, // Enables round shape
-                pointStyle: "circle", // Circle shape for legend items
-                boxWidth: 5, // Width of the marker
-                boxHeight: 5, // Height of the marker (optional, Chart.js 4+)
-                padding: 5, // Optional: space between legend items
-              },
-            },
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
-    </script>
   </body>
 </html>
