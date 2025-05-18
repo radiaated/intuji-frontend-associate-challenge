@@ -134,7 +134,7 @@
   @include flex-col;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   z-index: 90;
   background-color: $gray-0;
   overflow-y: scroll;
@@ -194,7 +194,7 @@
     }
   }
   &.sidebar-collapsed {
-    left: calc(-1 * $sidebar-width);
+    left: calc(-1 * $sidebar-width) !important;
     display: block;
   }
 
@@ -213,7 +213,7 @@
 
 @media only screen and (min-width: 740px) {
   #sidebar {
-    left: 0;
+    left: 0 !important;
   }
   .btn-sidebar-collapse {
     display: none;
