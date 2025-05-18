@@ -134,7 +134,7 @@
   @include flex-col;
   position: fixed;
   top: 0;
-  left: calc(-100%);
+  left: 0;
   z-index: 90;
   background-color: $gray-0;
   overflow-y: scroll;
@@ -194,7 +194,7 @@
     }
   }
   &.sidebar-collapsed {
-    left: 0;
+    left: calc(-1 * $sidebar-width);
     display: block;
   }
 

@@ -321,7 +321,7 @@ a:active {
   flex-direction: column;
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
   z-index: 90;
   background-color: #fff;
   overflow-y: scroll;
@@ -390,7 +390,7 @@ a:active {
   margin-bottom: 1.25em;
 }
 #sidebar.sidebar-collapsed {
-  left: 0;
+  left: -280px;
   display: block;
 }
 #sidebar::-webkit-scrollbar {

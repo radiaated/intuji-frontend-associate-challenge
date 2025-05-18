@@ -16,12 +16,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Sidebar collapse handler
   function sidebarCollapseHandler(event) {
-    htmlSidebar.classList.toggle("sidebar-collapsed");
     if (htmlSidebar.classList.contains("sidebar-collapsed")) {
       htmlBackdrop.style.display = "block";
     } else {
       htmlBackdrop.style.display = "none";
     }
+    htmlSidebar.classList.toggle("sidebar-collapsed");
+  }
+
+  if (document.body.clientWidth > 740) {
+    // htmlSidebar.style.left = "0";
+    htmlSidebar.classList.remove("sidebar-collapsed");
+  } else {
+    htmlSidebar.classList.add("sidebar-collapsed");
+    // htmlSidebar.style.left = `-${htmlSidebar.scrollWidth + 10}px`;
   }
 
   // Add event listeners
@@ -33,11 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("resize", function (event) {
     if (document.body.clientWidth > 740) {
-      htmlSidebar.style.left = "0";
+      // htmlSidebar.style.left = "0";
+      htmlSidebar.classList.remove("sidebar-collapsed");
     } else {
-      htmlSidebar.style.left = `-${htmlSidebar.scrollWidth + 10}px`;
+      htmlSidebar.classList.add("sidebar-collapsed");
+      // htmlSidebar.style.left = `-${htmlSidebar.scrollWidth + 10}px`;
     }
-    htmlSidebar.classList.add("sidebar-collapsed");
     htmlBackdrop.style.display = "none";
   });
 
