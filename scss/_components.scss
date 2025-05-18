@@ -1,17 +1,22 @@
-.btn {
+.btn,
+a {
   background-color: transparent;
-
   border: none;
   cursor: pointer;
+  img {
+    pointer-events: none;
+  }
+  transition: background-color 0.1s ease-in-out;
 
-  &:hover {
-    background-color: rgb(137, 137, 137);
+  &:hover,
+  &:active {
+    background-color: $gray-50;
   }
 }
 
 .card {
   background-color: $gray-0;
-  padding: 16px;
+  padding: $base-spacing;
   border-radius: $base-radius;
   height: 100%;
   width: 100%;
@@ -21,7 +26,7 @@
   }
 
   .card-title {
-    padding-bottom: calc($base-spacing * 2);
+    padding-bottom: calc($base-spacing * 1.25);
   }
 
   .card-title-border {
@@ -30,7 +35,17 @@
 }
 
 .card-between {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flex-col-between;
+}
+
+#backdrop {
+  display: none;
+  background-color: black;
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 80;
 }

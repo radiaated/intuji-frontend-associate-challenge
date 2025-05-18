@@ -9,45 +9,53 @@
   </head>
   <body>
     <div id="sidebar">
-      <div class="sidebar__brand flex-row">
-        <button id="btn-sidebar-collapse" class="btn">
-          <img src="/assets/icons/icon-dashboard.svg" alt="Menu" />
+      <div id="sidebar-header">
+        <div class="sidebar__brand">
+          <img
+            src="/assets/image/brand-logo.svg"
+            style="height: 28px"
+            alt=""
+            id="sidebar-brand-logo"
+          />
+          radiated
+        </div>
+        <button class="btn btn-header-nav btn-sidebar-collapse">
+          <img
+            src="/assets/icons/icon-hamburger.svg"
+            style="height: 28px"
+            alt="Menu"
+          />
         </button>
-
-        <img
-          src="/assets/icons/icon-calendar.svg"
-          alt=""
-          id="sidebar-brand-logo"
-        />
       </div>
       <nav id="sidebar-navbar">
         <div>
           <ul class="sidebar-navbar__links">
-            <li class="sidebar-navbar__links__item">
+            <li class="sidebar-navbar__links__item active">
               <a href="#" class="sidebar-navbar__links__item__link"
                 ><img src="/assets/icons/icon-dashboard.svg" alt="Dashboard" />
+
                 <span>Dashboard</span></a
               >
             </li>
-            <li class="sidebar-navbar-link__item">
+            <li class="sidebar-navbar__links__item">
               <a href="#" class="sidebar-navbar__links__item__link"
                 ><img src="/assets/icons/icon-calendar.svg" alt="Schedule" />
                 <span>Schedule</span></a
               >
             </li>
-            <li class="sidebar-navbar-link__item">
+            <li class="sidebar-navbar__links__item">
               <a href="#" class="sidebar-navbar__links__item__link"
                 ><img src="/assets/icons/icon-message.svg" alt="Message" />
                 <span>Message</span></a
               >
             </li>
-            <li class="sidebar-navbar-link__item">
+            <li class="sidebar-navbar__links__item">
               <a href="#" class="sidebar-navbar__links__item__link"
                 ><img src="/assets/icons/icon-chart.svg" alt="Analysis" />
                 <span>Analysis</span></a
               >
             </li>
-            <li class="sidebar-navbar-link__item">
+            <li class="sidebar-navbar__links__item">
               <a href="#" class="sidebar-navbar__links__item__link"
                 ><img src="/assets/icons/icon-team.svg" alt="Team" /><span
                   >Team</span
@@ -55,7 +63,9 @@
               >
             </li>
           </ul>
-          <hr />
+          <div style="margin: 1.5em 2em">
+            <hr />
+          </div>
           <ul class="sidebar-navbar__links">
             <li class="sidebar-navbar__links__item">
               <a href="#" class="sidebar-navbar__links__item__link"
@@ -90,24 +100,103 @@
       </nav>
     </div>
     <header id="page-header">
-      <nav class="page-header__navbar grid-page">
-        <form action="#" id="form-navbar-search">
-          <div class="form-group form-group--with-icon">
-            <img src="/assets/icons/icon-search.svg" alt="Search icon" />
-            <input type="text" name="search" placeholder="Search here..." />
-          </div>
-        </form>
-        <div id="page-header-buttons" class="flex-row">
-          <button class="page-header-button">
-            <img src="/assets/icons/icon-bell.svg" alt="Notification icon" />
+      <nav class="page-header__navbar">
+        <div class="flex-row" style="gap: 0.75em; width: 100%">
+          <button class="btn btn-header-nav btn-sidebar-collapse">
+            <img
+              src="/assets/icons/icon-hamburger.svg"
+              style="height: 28px"
+              alt="Menu"
+            />
           </button>
-          <button class="page-header-button">
+          <form action="#" id="form-navbar-search" style="width: 100%">
+            <div class="form-group form-group--with-icon">
+              <img src="/assets/icons/icon-search.svg" alt="Search icon" />
+              <input type="text" name="search" placeholder="Search here..." />
+            </div>
+          </form>
+        </div>
+        <button id="btn-header-menu" class="btn btn-header-nav">
+          <img
+            src="/assets/icons/icon-menu.svg"
+            alt="Menu"
+            style="width: 28px"
+          />
+        </button>
+        <div id="page-header-buttons" class="collapsed">
+          <div id="page-header-notification-container">
+            <button class="btn page-header-button">
+              <img src="/assets/icons/icon-bell.svg" alt="Notification icon" />
+            </button>
+            <div id="page-header-notification-dropdown" class="collapsed">
+              <ul id="page-header-notification-dropdown-list">
+                <li class="page-header-notification-dropdown-list__item">
+                  <a
+                    href="#"
+                    class="page-header-notification-dropdown-list__item__link"
+                  >
+                    Check these new widgets.
+                  </a>
+                </li>
+                <li class="page-header-notification-dropdown-list__item">
+                  <a
+                    href="#"
+                    class="page-header-notification-dropdown-list__item__link"
+                  >
+                    Someone poked you.
+                  </a>
+                </li>
+                <li class="page-header-notification-dropdown-list__item">
+                  <a
+                    href="#"
+                    class="page-header-notification-dropdown-list__item__link"
+                  >
+                    John doe visited your website.
+                  </a>
+                </li>
+                <li class="page-header-notification-dropdown-list__item">
+                  <a
+                    href="#"
+                    class="page-header-notification-dropdown-list__item__link"
+                  >
+                    Check these trends.
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn page-header-button">
             <img src="/assets/icons/icon-message-text.svg" alt="Chat icon" />
           </button>
-          <button id="page-header-button-profile">
-            Mirie Kiritani
-            <img src="/assets/icons/icon-down-chevron.svg" alt="Dropdown" />
-          </button>
+          <div id="page-header-profile-container">
+            <button id="page-header-button-profile" class="btn">
+              <img
+                src="/assets/image/person-avatar.jpg"
+                alt="Dropdown"
+                id="page-header-button-profile-avatar"
+              />
+              Mirie Kiritani
+              <img src="/assets/icons/icon-down-chevron.svg" alt="Dropdown" />
+            </button>
+            <div id="page-header-profile-dropdown" class="collapsed">
+              <ul id="page-header-profile-dropdown-list">
+                <li class="page-header-profile-dropdown-list__item">
+                  <a
+                    href="#"
+                    class="page-header-profile-dropdown-list__item__link"
+                    >Profile</a
+                  >
+                </li>
+                <li class="page-header-profile-dropdown-list__item">
+                  <a
+                    href="#"
+                    class="page-header-profile-dropdown-list__item__link"
+                    >Settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -134,7 +223,38 @@
                 </div>
                 <div class="section-overview__stats__item__value">
                   <h2>$ 28,891.138</h2>
-                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.0098 12H20.3298"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H6.97"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
               </div>
               <div class="section-overview__stats__item">
@@ -152,7 +272,38 @@
                 </div>
                 <div class="section-overview__stats__item__value">
                   <h2>$ 1,050.44</h2>
-                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.0098 12H20.3298"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H6.97"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
               </div>
               <div class="section-overview__stats__item">
@@ -170,7 +321,38 @@
                 </div>
                 <div class="section-overview__stats__item__value">
                   <h2>$ 200.31</h2>
-                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.0098 12H20.3298"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H6.97"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
               </div>
               <div class="section-overview__stats__item">
@@ -188,7 +370,38 @@
                 </div>
                 <div class="section-overview__stats__item__value">
                   <h2>$ 21,121.0</h2>
-                  <img src="/assets/icons/icon-arrow-right.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.0098 12H20.3298"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H6.97"
+                      stroke="#0D163A"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -197,7 +410,10 @@
       </section>
       <section id="section-splan">
         <div class="card card-between">
-          <div class="card-title card-title-border"><h3>Saving Plan</h3></div>
+          <div class="card-title card-title-border">
+            <h3>Saving Plan</h3>
+            <a href="#">See all</a>
+          </div>
           <div class="card-body">
             <div class="section-splan__item">
               <div class="section-splan__item__header">
@@ -281,7 +497,7 @@
         <div class="card">
           <div class="card-title">
             <h3>Analytics</h3>
-            <div id="section-analytics-indices">
+            <!-- <div id="section-analytics-indices">
               <div class="section-analytics-indices__legend">
                 <div
                   class="section-analytics-indices__legend__indicator"
@@ -299,24 +515,29 @@
                 <div class="section-analytics-indices__legend__text">
                   Label 2
                 </div>
-              </div>
-              <form id="section-analytics-filter-by-week">
-                <select name="filter-week">
-                  <option value="1">Week1</option>
-                  <option value="2">Week2</option>
-                  <option value="3">Week3</option>
-                  <option value="4">Week4</option>
-                </select>
-              </form>
+              </div> -->
+            <form id="section-analytics-filter-by-week">
+              <select name="filter-week">
+                <option value="1">Week 1</option>
+                <option value="2">Week 2</option>
+                <option value="3">Week 3</option>
+                <option value="4">Week 4</option>
+              </select>
+            </form>
+            <!-- </div> -->
+          </div>
+          <div class="card-body">
+            <div id="analytics-chart-container">
+              <canvas id="analysis-chart"></canvas>
             </div>
           </div>
-          <div class="card-body">Analytics</div>
         </div>
       </section>
       <section id="section-recentr">
         <div class="card card-between">
           <div class="card-title card-title-border">
             <h3>Recent Transaction</h3>
+            <a href="#">See all</a>
           </div>
           <div class="card-body">
             <div class="section-recentr__item">
@@ -337,7 +558,7 @@
             <div class="section-recentr__item">
               <div class="section-recentr__item__info">
                 <div class="section-recentr__item__info__img">
-                  <img src="/assets/image/logo-figma.png" alt="Figma" />
+                  <img src="/assets/image/logo-yt.png" alt="Figma" />
                 </div>
                 <div class="section-recentr__item__info__detail">
                   <h4>Youtube</h4>
@@ -352,7 +573,7 @@
             <div class="section-recentr__item">
               <div class="section-recentr__item__info">
                 <div class="section-recentr__item__info__img">
-                  <img src="/assets/image/logo-figma.png" alt="Figma" />
+                  <img src="/assets/image/logo-spotify.png" alt="Figma" />
                 </div>
                 <div class="section-recentr__item__info__detail">
                   <h4>Spotify</h4>
@@ -367,7 +588,7 @@
             <div class="section-recentr__item">
               <div class="section-recentr__item__info">
                 <div class="section-recentr__item__info__img">
-                  <img src="/assets/image/logo-figma.png" alt="Figma" />
+                  <img src="/assets/image/logo-freepik.png" alt="Figma" />
                 </div>
                 <div class="section-recentr__item__info__detail">
                   <h4>Freepik</h4>
@@ -383,5 +604,62 @@
         </div>
       </section>
     </main>
+    <div id="backdrop"></div>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("analysis-chart");
+
+      new Chart(ctx, {
+        type: "line",
+
+        data: {
+          labels: ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"],
+          datasets: [
+            {
+              label: "Label 1",
+              data: [12, 19, 3, 5, 2, 3, 8],
+              borderWidth: 1,
+              fill: false,
+              borderColor: "#4745a4",
+              tension: 0.1,
+              backgroundColor: "#4745a4",
+            },
+            {
+              label: "Label 2",
+              data: [9, 8, 5, 33, 44, 55, 99, 44],
+              borderWidth: 1,
+              fill: false,
+              borderColor: "#f9ba33",
+              tension: 0.1,
+              backgroundColor: "#f9ba33",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "top",
+              labels: {
+                usePointStyle: true, // Enables round shape
+                pointStyle: "circle", // Circle shape for legend items
+                boxWidth: 5, // Width of the marker
+                boxHeight: 5, // Height of the marker (optional, Chart.js 4+)
+                padding: 5, // Optional: space between legend items
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
