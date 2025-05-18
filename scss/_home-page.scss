@@ -172,6 +172,7 @@
         transition: background-color 0.1s;
         &.active {
           border-left: 4px solid $primary-color;
+          font-weight: bold;
         }
 
         &:hover {

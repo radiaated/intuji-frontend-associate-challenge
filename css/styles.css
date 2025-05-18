@@ -371,6 +371,7 @@ a:active {
 }
 #sidebar #sidebar-navbar .sidebar-navbar__links .sidebar-navbar__links__item.active {
   border-left: 4px solid #4745a4;
+  font-weight: bold;
 }
 #sidebar #sidebar-navbar .sidebar-navbar__links .sidebar-navbar__links__item:hover {
   background-color: #f7f7fb;
